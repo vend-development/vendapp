@@ -1,0 +1,179 @@
+{
+  "project_info": {
+    "project_number": "938265649015",
+    "firebase_url": "https://vend-production-195e9-default-rtdb.firebaseio.com",
+    "project_id": "vend-production-195e9",
+    "storage_bucket": "vend-production-195e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938265649015:android:d3b939d385372a38adcb72",
+        "android_client_info": {
+          "package_name": "com.nycemedia.vend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "938265649015-mht13p1i1863smen6j497qh0arsrgse3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUOGnj7ZoMp5M3YabdW7exKALcl372cu4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "938265649015-mht13p1i1863smen6j497qh0arsrgse3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "938265649015-ajmlk4h6qlgmvo8tngp21h0cskck5b2h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.nycemedia.vend"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938265649015:android:c9124ea22825de00adcb72",
+        "android_client_info": {
+          "package_name": "com.nycemedia.vend002"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "938265649015-rsr1i5ggkvs7nbo5679j8v29s92f6h11.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nycemedia.vend002",
+            "certificate_hash": "5bd9971b29ae3dfd628074a552ffa71d0e8b5f79"
+          }
+        },
+        {
+          "client_id": "938265649015-mht13p1i1863smen6j497qh0arsrgse3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUOGnj7ZoMp5M3YabdW7exKALcl372cu4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "938265649015-mht13p1i1863smen6j497qh0arsrgse3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "938265649015-ajmlk4h6qlgmvo8tngp21h0cskck5b2h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.nycemedia.vend"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938265649015:android:3d091acdc0a6389eadcb72",
+        "android_client_info": {
+          "package_name": "com.nycemedia.vend02"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "938265649015-dj0bp1n89sjjpuu3tdn1hda9auasro0s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nycemedia.vend02",
+            "certificate_hash": "5bd9971b29ae3dfd628074a552ffa71d0e8b5f79"
+          }
+        },
+        {
+          "client_id": "938265649015-mht13p1i1863smen6j497qh0arsrgse3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUOGnj7ZoMp5M3YabdW7exKALcl372cu4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "938265649015-mht13p1i1863smen6j497qh0arsrgse3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "938265649015-ajmlk4h6qlgmvo8tngp21h0cskck5b2h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.nycemedia.vend"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938265649015:android:746cdb5435905dc2adcb72",
+        "android_client_info": {
+          "package_name": "com.nycemedia.vend_a"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "938265649015-jkjl5tjv3fs63ppr6ve4nok340lnk88f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nycemedia.vend_a",
+            "certificate_hash": "5bd9971b29ae3dfd628074a552ffa71d0e8b5f79"
+          }
+        },
+        {
+          "client_id": "938265649015-mht13p1i1863smen6j497qh0arsrgse3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUOGnj7ZoMp5M3YabdW7exKALcl372cu4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "938265649015-mht13p1i1863smen6j497qh0arsrgse3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "938265649015-ajmlk4h6qlgmvo8tngp21h0cskck5b2h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.nycemedia.vend"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
