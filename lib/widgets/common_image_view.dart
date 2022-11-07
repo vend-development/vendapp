@@ -9,6 +9,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 class CommonImageView extends StatelessWidget {
   ///[url] is required parameter for fetching network image
   String? url;
+  String? imageUri;
   String? imagePath;
   String? svgPath;
   File? file;
@@ -22,6 +23,7 @@ class CommonImageView extends StatelessWidget {
   /// it will shows the placeholder image if image is not found on network
   CommonImageView({
     this.url,
+    this.imageUri,
     this.imagePath,
     this.svgPath,
     this.file,
@@ -85,6 +87,12 @@ class CommonImageView extends StatelessWidget {
         height: height,
         width: width,
         fit: fit,
+      );
+    }
+    else if (imageUri != null && imageUri!.isNotEmpty){
+      return Image.network(
+          imageUri!
+          // imageUri
       );
     }
     return SizedBox();

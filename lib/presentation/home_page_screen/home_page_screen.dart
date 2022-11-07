@@ -1,6 +1,7 @@
 import 'package:application3/presentation/cart_screen/controller/cart_controller.dart';
 import 'package:application3/widgets/custom_search_view.dart';
 
+import '../../widgets/NavBar.dart';
 import '../cart_screen/cart_screen.dart';
 import '../home_page_screen/widgets/home_page_item_widget.dart';
 import '../pricelist_screen/controller/pricelist_controller.dart';
@@ -18,6 +19,7 @@ class HomePageScreen extends GetWidget<HomePageController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       backgroundColor: ColorConstant.whiteA700,
       appBar: AppBar(
         title:Align(
@@ -128,6 +130,7 @@ class HomePageScreen extends GetWidget<HomePageController> {
         backgroundColor: Colors.white ,
 
       ),
+      drawer: NavBar(),
       body: SafeArea(
         child: Container(
           width: size.width,

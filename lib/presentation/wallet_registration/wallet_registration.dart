@@ -1,9 +1,7 @@
-import 'package:application3/core/services/snackbars.dart';
-import 'package:application3/presentation/filter_result_container_screen/filter_result_container_screen.dart';
-import 'package:application3/presentation/walkthrough_two_screen/walkthrough_two_screen.dart';
 
 import '../../core/services/APIService.dart';
 import '../create_new_password_screen/create_new_password_screen.dart';
+import '../general_home_screens/filter_result_container_screen.dart';
 import 'controller/sign_in_blank_form_controller.dart';
 import 'package:application3/core/app_export.dart';
 import 'package:application3/core/utils/validation_functions.dart';

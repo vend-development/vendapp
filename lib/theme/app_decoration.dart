@@ -286,6 +286,235 @@ class AppDecoration {
     color: ColorConstant.bluegray900,
   );
 
+  static BoxDecoration get gradientDeeppurpleA200f2DeeppurpleA200f3 =>
+      BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment(
+            0.4999999519038431,
+            -3.061615561187998e-17,
+          ),
+          end: Alignment(
+            0.49999995190384317,
+            0.8069196133338322,
+          ),
+          colors: [
+            ColorConstant.deepPurpleA200F2,
+            ColorConstant.deepPurpleA200F3,
+          ],
+        ),
+      );
+  static BoxDecoration get gradientBlack9007fGray40000 => BoxDecoration(
+    gradient: LinearGradient(
+      begin: Alignment(
+        0.5,
+        -3.0616171314629196e-17,
+      ),
+      end: Alignment(
+        0.5,
+        0.9999999999999999,
+      ),
+      colors: [
+        ColorConstant.black9007f,
+        ColorConstant.gray40000,
+      ],
+    ),
+  );
+  static BoxDecoration get gradientGray40000Black900ad => BoxDecoration(
+    gradient: LinearGradient(
+      begin: Alignment(
+        0.4885321259498596,
+        3.061617255953296e-17,
+      ),
+      end: Alignment(
+        0.4885321259498597,
+        1,
+      ),
+      colors: [
+        ColorConstant.gray40000,
+        ColorConstant.black900Ad,
+      ],
+    ),
+  );
+  static BoxDecoration get gradientWhiteA70000Black900ad => BoxDecoration(
+    gradient: LinearGradient(
+      begin: Alignment(
+        0.4885321259498596,
+        3.061617255953296e-17,
+      ),
+      end: Alignment(
+        0.4885321259498597,
+        1,
+      ),
+      colors: [
+        ColorConstant.whiteA70000,
+        ColorConstant.black900Ad,
+      ],
+    ),
+  );
+  static BoxDecoration get txtFillDeeppurpleA200 => BoxDecoration(
+    color: ColorConstant.deepPurpleA200,
+  );
+  static BoxDecoration get fillIndigo50 => BoxDecoration(
+    color: ColorConstant.indigo50,
+  );
+  static BoxDecoration get gradientBlack9009eBlack9009e => BoxDecoration(
+    gradient: LinearGradient(
+      begin: Alignment(
+        0.5,
+        -3.0616171314629196e-17,
+      ),
+      end: Alignment(
+        0.5,
+        0.9999999999999999,
+      ),
+      colors: [
+        ColorConstant.black9009e,
+        ColorConstant.black9009e,
+      ],
+    ),
+  );
+  static BoxDecoration get gradientBlack9009eBlack9009e3 => BoxDecoration(
+    gradient: LinearGradient(
+      begin: Alignment(
+        0.4999999629151566,
+        -3.0616168159219435e-17,
+      ),
+      end: Alignment(
+        0.4999999629151566,
+        1.2443608601517941,
+      ),
+      colors: [
+        ColorConstant.black9009e,
+        ColorConstant.black9009e,
+      ],
+    ),
+  );
+  static BoxDecoration get outlineDeeppurpleA200 => BoxDecoration(
+    border: Border.all(
+      color: ColorConstant.deepPurpleA200,
+      width: getHorizontalSize(
+        1.50,
+      ),
+    ),
+  );
+  static BoxDecoration get gradientBlack9009eBlack9009e1 => BoxDecoration(
+    gradient: LinearGradient(
+      begin: Alignment(
+        0.4999999629151566,
+        -3.0616168159219435e-17,
+      ),
+      end: Alignment(
+        0.4999999629151566,
+        1.2443608601517941,
+      ),
+      colors: [
+        ColorConstant.black90000,
+        ColorConstant.black9009e,
+      ],
+    ),
+  );
+  static BoxDecoration get gradientBlack9009eBlack9009e2 => BoxDecoration(
+    gradient: LinearGradient(
+      begin: Alignment(
+        0.5,
+        -3.0616171314629196e-17,
+      ),
+      end: Alignment(
+        0.5,
+        0.9999999999999999,
+      ),
+      colors: [
+        ColorConstant.fromHex("#FFFF00"),
+        ColorConstant.black9009e,
+      ],
+    ),
+  );
+  static BoxDecoration get fillBlack90087 => BoxDecoration(
+    color: ColorConstant.black90087,
+  );
+  static BoxDecoration get fillDeeppurpleA200 => BoxDecoration(
+    color: ColorConstant.deepPurpleA200,
+  );
+  static BoxDecoration get gradientWhiteA70000Black900ad1 => BoxDecoration(
+    gradient: LinearGradient(
+      begin: Alignment(
+        0.4885321259498596,
+        -8.575622471405923e-16,
+      ),
+      end: Alignment(
+        0.4885321259498597,
+        0.9999999999999991,
+      ),
+      colors: [
+        ColorConstant.whiteA70000,
+        ColorConstant.black900Ad,
+      ],
+    ),
+  );
+  static BoxDecoration get outlineDeeppurpleA2001 => BoxDecoration(
+    border: Border.all(
+      color: ColorConstant.deepPurpleA200,
+      width: getHorizontalSize(
+        2.00,
+      ),
+    ),
+  );
+  static BoxDecoration get gradientDeeppurpleA200f2DeeppurpleA200f31 =>
+      BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment(
+            0.4999999519038431,
+            -3.061615561187998e-17,
+          ),
+          end: Alignment(
+            0.49999995190384317,
+            0.8069196133338322,
+          ),
+          colors: [
+            ColorConstant.deepPurpleA200F2,
+            ColorConstant.deepPurpleA200F3,
+          ],
+        ),
+      );
+  static BoxDecoration get fillGray100 => BoxDecoration(
+    color: ColorConstant.gray100,
+  );
+  static BoxDecoration get outlineBlack90019 => BoxDecoration(
+    color: ColorConstant.whiteA701,
+    boxShadow: [
+      BoxShadow(
+        color: ColorConstant.black90019,
+        spreadRadius: getHorizontalSize(
+          2.00,
+        ),
+        blurRadius: getHorizontalSize(
+          2.00,
+        ),
+        offset: Offset(
+          2,
+          1,
+        ),
+      ),
+    ],
+  );
+  static BoxDecoration get gradientBlack90000Black901 => BoxDecoration(
+    gradient: LinearGradient(
+      begin: Alignment(
+        0.4999999629151566,
+        -3.0616168159219435e-17,
+      ),
+      end: Alignment(
+        0.4999999629151566,
+        1.2443608601517941,
+      ),
+      colors: [
+        ColorConstant.black90000,
+        ColorConstant.black90000,
+        ColorConstant.black901,
+      ],
+    ),
+  );
+
 }
 
 
@@ -425,6 +654,140 @@ class BorderRadiusStyle {
   static BorderRadius txtCircleBorder19 = BorderRadius.circular(
     getHorizontalSize(
       19.00,
+    ),
+  );
+
+  static BorderRadius customBorderBL15 = BorderRadius.only(
+    topRight: Radius.circular(
+      getHorizontalSize(
+        15.00,
+      ),
+    ),
+    bottomLeft: Radius.circular(
+      getHorizontalSize(
+        15.00,
+      ),
+    ),
+    bottomRight: Radius.circular(
+      getHorizontalSize(
+        15.00,
+      ),
+    ),
+  );
+
+  static BorderRadius customBorderTL30 = BorderRadius.only(
+    topLeft: Radius.circular(
+      getHorizontalSize(
+        30.00,
+      ),
+    ),
+    topRight: Radius.circular(
+      getHorizontalSize(
+        30.00,
+      ),
+    ),
+  );
+
+  static BorderRadius customBorderTL15 = BorderRadius.only(
+    topLeft: Radius.circular(
+      getHorizontalSize(
+        15.00,
+      ),
+    ),
+  );
+
+  static BorderRadius roundedBorder103 = BorderRadius.circular(
+    getHorizontalSize(
+      103.00,
+    ),
+  );
+
+  static BorderRadius roundedBorder39 = BorderRadius.circular(
+    getHorizontalSize(
+      39.91,
+    ),
+  );
+
+  static BorderRadius roundedBorder17 = BorderRadius.circular(
+    getHorizontalSize(
+      17.50,
+    ),
+  );
+
+  static BorderRadius circleBorder25 = BorderRadius.circular(
+    getHorizontalSize(
+      25.00,
+    ),
+  );
+
+
+
+  static BorderRadius roundedBorder4 = BorderRadius.circular(
+    getHorizontalSize(
+      4.00,
+    ),
+  );
+
+  static BorderRadius circleBorder20 = BorderRadius.circular(
+    getHorizontalSize(
+      20.00,
+    ),
+  );
+
+  static BorderRadius circleBorder32 = BorderRadius.circular(
+    getHorizontalSize(
+      32.00,
+    ),
+  );
+
+  static BorderRadius roundedBorder22 = BorderRadius.circular(
+    getHorizontalSize(
+      22.50,
+    ),
+  );
+
+  static BorderRadius customBorderLR15 = BorderRadius.only(
+    topRight: Radius.circular(
+      getHorizontalSize(
+        15.00,
+      ),
+    ),
+    bottomRight: Radius.circular(
+      getHorizontalSize(
+        15.00,
+      ),
+    ),
+  );
+
+  static BorderRadius circleBorder70 = BorderRadius.circular(
+    getHorizontalSize(
+      70.00,
+    ),
+  );
+
+  static BorderRadius circleBorder60 = BorderRadius.circular(
+    getHorizontalSize(
+      60.00,
+    ),
+  );
+
+  static BorderRadius roundedBorder51 = BorderRadius.circular(
+    getHorizontalSize(
+      51.00,
+    ),
+  );
+
+  static BorderRadius roundedBorder82 = BorderRadius.circular(
+    getHorizontalSize(
+      82.55,
+    ),
+  );
+
+  static BorderRadius customBorderBL151 = BorderRadius.only(
+    bottomLeft: Radius.circular(
+      getHorizontalSize(
+        15.00,
+      ),
     ),
   );
 }

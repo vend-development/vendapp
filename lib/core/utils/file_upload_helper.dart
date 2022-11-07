@@ -73,6 +73,7 @@ class FileManager {
       var extension = element.path.split('.');
       if (allowedExtensions != null && allowedExtensions.isNotEmpty) {
         if (allowedExtensions.contains(extension.last)) {
+
           files.add(element.path);
         } else {
           Get.snackbar('msg', 'only $allowedExtensions images are allowed');

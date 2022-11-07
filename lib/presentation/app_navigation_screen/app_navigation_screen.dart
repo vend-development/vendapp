@@ -59,7 +59,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                       children: [
                                         GestureDetector(
                                             onTap: () {
-                                              onTapSignup();
+                                              onTapSplash();
                                             },
                                             child: Container(
                                                 width:
@@ -84,7 +84,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "lbl_sign_up3"
+                                                                  "lbl_splash"
                                                                       .tr,
                                                                   overflow:
                                                                       TextOverflow
@@ -105,11 +105,11 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                               getMargin(top: 5),
                                                           decoration: BoxDecoration(
                                                               color: ColorConstant
-                                                                  .bluegray400))
+                                                                  .bluegray401))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapSignupOne();
+                                              onTapLoginScreen();
                                             },
                                             child: Container(
                                                 width:
@@ -134,7 +134,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "lbl_sign_up_one"
+                                                                  "lbl_login_screen"
                                                                       .tr,
                                                                   overflow:
                                                                       TextOverflow
@@ -155,11 +155,11 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                               getMargin(top: 5),
                                                           decoration: BoxDecoration(
                                                               color: ColorConstant
-                                                                  .bluegray400))
+                                                                  .bluegray401))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapLogin();
+                                              onTapLogIn();
                                             },
                                             child: Container(
                                                 width:
@@ -205,11 +205,11 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                               getMargin(top: 5),
                                                           decoration: BoxDecoration(
                                                               color: ColorConstant
-                                                                  .bluegray400))
+                                                                  .bluegray401))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapCart();
+                                              onTapForgotPassword();
                                             },
                                             child: Container(
                                                 width:
@@ -234,7 +234,8 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "lbl_cart".tr,
+                                                                  "lbl_forgot_password"
+                                                                      .tr,
                                                                   overflow:
                                                                       TextOverflow
                                                                           .ellipsis,
@@ -254,11 +255,11 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                               getMargin(top: 5),
                                                           decoration: BoxDecoration(
                                                               color: ColorConstant
-                                                                  .bluegray400))
+                                                                  .bluegray401))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapCartOne();
+                                              onTapSignUp();
                                             },
                                             child: Container(
                                                 width:
@@ -283,7 +284,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "lbl_cart_one"
+                                                                  "lbl_sign_up"
                                                                       .tr,
                                                                   overflow:
                                                                       TextOverflow
@@ -304,11 +305,11 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                               getMargin(top: 5),
                                                           decoration: BoxDecoration(
                                                               color: ColorConstant
-                                                                  .bluegray400))
+                                                                  .bluegray401))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapCreateProfile();
+                                              onTapNotification();
                                             },
                                             child: Container(
                                                 width:
@@ -333,7 +334,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "lbl_create_profile"
+                                                                  "lbl_notification"
                                                                       .tr,
                                                                   overflow:
                                                                       TextOverflow
@@ -354,11 +355,11 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                               getMargin(top: 5),
                                                           decoration: BoxDecoration(
                                                               color: ColorConstant
-                                                                  .bluegray400))
+                                                                  .bluegray401))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapOrders();
+                                              onTapInviteFriends();
                                             },
                                             child: Container(
                                                 width:
@@ -383,7 +384,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "lbl_orders"
+                                                                  "lbl_invite_friends"
                                                                       .tr,
                                                                   overflow:
                                                                       TextOverflow
@@ -404,11 +405,11 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                               getMargin(top: 5),
                                                           decoration: BoxDecoration(
                                                               color: ColorConstant
-                                                                  .bluegray400))
+                                                                  .bluegray401))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapReceipts();
+                                              onTapDiscover();
                                             },
                                             child: Container(
                                                 width:
@@ -433,7 +434,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "lbl_receipts"
+                                                                  "lbl_discover"
                                                                       .tr,
                                                                   overflow:
                                                                       TextOverflow
@@ -454,11 +455,11 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                               getMargin(top: 5),
                                                           decoration: BoxDecoration(
                                                               color: ColorConstant
-                                                                  .bluegray400))
+                                                                  .bluegray401))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapOrdersConfirmation();
+                                              onTapDailyNew();
                                             },
                                             child: Container(
                                                 width:
@@ -483,7 +484,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "msg_orders_confirma"
+                                                                  "lbl_daily_new"
                                                                       .tr,
                                                                   overflow:
                                                                       TextOverflow
@@ -504,11 +505,11 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                               getMargin(top: 5),
                                                           decoration: BoxDecoration(
                                                               color: ColorConstant
-                                                                  .bluegray400))
+                                                                  .bluegray401))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapHomePage();
+                                              onTapTrending();
                                             },
                                             child: Container(
                                                 width:
@@ -533,7 +534,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "lbl_home_page"
+                                                                  "lbl_trending"
                                                                       .tr,
                                                                   overflow:
                                                                       TextOverflow
@@ -554,11 +555,11 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                               getMargin(top: 5),
                                                           decoration: BoxDecoration(
                                                               color: ColorConstant
-                                                                  .bluegray400))
+                                                                  .bluegray401))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapResetPassword();
+                                              onTapStories();
                                             },
                                             child: Container(
                                                 width:
@@ -583,7 +584,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "lbl_reset_password"
+                                                                  "lbl_stories"
                                                                       .tr,
                                                                   overflow:
                                                                       TextOverflow
@@ -604,11 +605,11 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                               getMargin(top: 5),
                                                           decoration: BoxDecoration(
                                                               color: ColorConstant
-                                                                  .bluegray400))
+                                                                  .bluegray401))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapPricelist();
+                                              onTapTrendingposts();
                                             },
                                             child: Container(
                                                 width:
@@ -633,7 +634,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "lbl_pricelist"
+                                                                  "lbl_trending_posts"
                                                                       .tr,
                                                                   overflow:
                                                                       TextOverflow
@@ -654,11 +655,11 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                               getMargin(top: 5),
                                                           decoration: BoxDecoration(
                                                               color: ColorConstant
-                                                                  .bluegray400))
+                                                                  .bluegray401))
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapIndividualProductPage();
+                                              onTapStoriesandTweets();
                                             },
                                             child: Container(
                                                 width:
@@ -683,7 +684,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "msg_individual_prod"
+                                                                  "msg_stories_and_twe"
                                                                       .tr,
                                                                   overflow:
                                                                       TextOverflow
@@ -704,61 +705,923 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                               getMargin(top: 5),
                                                           decoration: BoxDecoration(
                                                               color: ColorConstant
-                                                                  .bluegray400))
+                                                                  .bluegray401))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapSearch();
+                                            },
+                                            child: Container(
+                                                width:
+                                                    getHorizontalSize(375.00),
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "lbl_search"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20Black90013))),
+                                                      Container(
+                                                          height:
+                                                              getVerticalSize(
+                                                                  1.00),
+                                                          width:
+                                                              getHorizontalSize(
+                                                                  375.00),
+                                                          margin:
+                                                              getMargin(top: 5),
+                                                          decoration: BoxDecoration(
+                                                              color: ColorConstant
+                                                                  .bluegray401))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapLive();
+                                            },
+                                            child: Container(
+                                                width:
+                                                    getHorizontalSize(375.00),
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "lbl_live".tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20Black90014))),
+                                                      Container(
+                                                          height:
+                                                              getVerticalSize(
+                                                                  1.00),
+                                                          width:
+                                                              getHorizontalSize(
+                                                                  375.00),
+                                                          margin:
+                                                              getMargin(top: 5),
+                                                          decoration: BoxDecoration(
+                                                              color: ColorConstant
+                                                                  .bluegray401))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapForYou();
+                                            },
+                                            child: Container(
+                                                width:
+                                                    getHorizontalSize(375.00),
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "lbl_for_you"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20Black90015))),
+                                                      Container(
+                                                          height:
+                                                              getVerticalSize(
+                                                                  1.00),
+                                                          width:
+                                                              getHorizontalSize(
+                                                                  375.00),
+                                                          margin:
+                                                              getMargin(top: 5),
+                                                          decoration: BoxDecoration(
+                                                              color: ColorConstant
+                                                                  .bluegray401))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapPageView();
+                                            },
+                                            child: Container(
+                                                width:
+                                                    getHorizontalSize(375.00),
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "lbl_page_view"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20Black90016))),
+                                                      Container(
+                                                          height:
+                                                              getVerticalSize(
+                                                                  1.00),
+                                                          width:
+                                                              getHorizontalSize(
+                                                                  375.00),
+                                                          margin:
+                                                              getMargin(top: 5),
+                                                          decoration: BoxDecoration(
+                                                              color: ColorConstant
+                                                                  .bluegray401))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapComments();
+                                            },
+                                            child: Container(
+                                                width:
+                                                    getHorizontalSize(375.00),
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "lbl_comments"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20Black90017))),
+                                                      Container(
+                                                          height:
+                                                              getVerticalSize(
+                                                                  1.00),
+                                                          width:
+                                                              getHorizontalSize(
+                                                                  375.00),
+                                                          margin:
+                                                              getMargin(top: 5),
+                                                          decoration: BoxDecoration(
+                                                              color: ColorConstant
+                                                                  .bluegray401))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapAccount();
+                                            },
+                                            child: Container(
+                                                width:
+                                                    getHorizontalSize(375.00),
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "lbl_account"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20Black90018))),
+                                                      Container(
+                                                          height:
+                                                              getVerticalSize(
+                                                                  1.00),
+                                                          width:
+                                                              getHorizontalSize(
+                                                                  375.00),
+                                                          margin:
+                                                              getMargin(top: 5),
+                                                          decoration: BoxDecoration(
+                                                              color: ColorConstant
+                                                                  .bluegray401))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapAccoutView();
+                                            },
+                                            child: Container(
+                                                width:
+                                                    getHorizontalSize(375.00),
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "lbl_accout_view"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20Black90019))),
+                                                      Container(
+                                                          height:
+                                                              getVerticalSize(
+                                                                  1.00),
+                                                          width:
+                                                              getHorizontalSize(
+                                                                  375.00),
+                                                          margin:
+                                                              getMargin(top: 5),
+                                                          decoration: BoxDecoration(
+                                                              color: ColorConstant
+                                                                  .bluegray401))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapAccountDetails();
+                                            },
+                                            child: Container(
+                                                width:
+                                                    getHorizontalSize(375.00),
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "lbl_account_details"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20Black90020))),
+                                                      Container(
+                                                          height:
+                                                              getVerticalSize(
+                                                                  1.00),
+                                                          width:
+                                                              getHorizontalSize(
+                                                                  375.00),
+                                                          margin:
+                                                              getMargin(top: 5),
+                                                          decoration: BoxDecoration(
+                                                              color: ColorConstant
+                                                                  .bluegray401))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapAccountDetailsOne();
+                                            },
+                                            child: Container(
+                                                width:
+                                                    getHorizontalSize(375.00),
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "msg_account_details"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20Black90021))),
+                                                      Container(
+                                                          height:
+                                                              getVerticalSize(
+                                                                  1.00),
+                                                          width:
+                                                              getHorizontalSize(
+                                                                  375.00),
+                                                          margin:
+                                                              getMargin(top: 5),
+                                                          decoration: BoxDecoration(
+                                                              color: ColorConstant
+                                                                  .bluegray401))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapMessages();
+                                            },
+                                            child: Container(
+                                                width:
+                                                    getHorizontalSize(375.00),
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "lbl_messages"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20Black90022))),
+                                                      Container(
+                                                          height:
+                                                              getVerticalSize(
+                                                                  1.00),
+                                                          width:
+                                                              getHorizontalSize(
+                                                                  375.00),
+                                                          margin:
+                                                              getMargin(top: 5),
+                                                          decoration: BoxDecoration(
+                                                              color: ColorConstant
+                                                                  .bluegray401))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapChat();
+                                            },
+                                            child: Container(
+                                                width:
+                                                    getHorizontalSize(375.00),
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "lbl_chat".tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20Black90023))),
+                                                      Container(
+                                                          height:
+                                                              getVerticalSize(
+                                                                  1.00),
+                                                          width:
+                                                              getHorizontalSize(
+                                                                  375.00),
+                                                          margin:
+                                                              getMargin(top: 5),
+                                                          decoration: BoxDecoration(
+                                                              color: ColorConstant
+                                                                  .bluegray401))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapFriends();
+                                            },
+                                            child: Container(
+                                                width:
+                                                    getHorizontalSize(375.00),
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "lbl_friends"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20Black90024))),
+                                                      Container(
+                                                          height:
+                                                              getVerticalSize(
+                                                                  1.00),
+                                                          width:
+                                                              getHorizontalSize(
+                                                                  375.00),
+                                                          margin:
+                                                              getMargin(top: 5),
+                                                          decoration: BoxDecoration(
+                                                              color: ColorConstant
+                                                                  .bluegray401))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapNotifications();
+                                            },
+                                            child: Container(
+                                                width:
+                                                    getHorizontalSize(375.00),
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "lbl_notifications"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20Black90025))),
+                                                      Container(
+                                                          height:
+                                                              getVerticalSize(
+                                                                  1.00),
+                                                          width:
+                                                              getHorizontalSize(
+                                                                  375.00),
+                                                          margin:
+                                                              getMargin(top: 5),
+                                                          decoration: BoxDecoration(
+                                                              color: ColorConstant
+                                                                  .bluegray401))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapProfile();
+                                            },
+                                            child: Container(
+                                                width:
+                                                    getHorizontalSize(375.00),
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "lbl_profile"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20Black90026))),
+                                                      Container(
+                                                          height:
+                                                              getVerticalSize(
+                                                                  1.00),
+                                                          width:
+                                                              getHorizontalSize(
+                                                                  375.00),
+                                                          margin:
+                                                              getMargin(top: 5),
+                                                          decoration: BoxDecoration(
+                                                              color: ColorConstant
+                                                                  .bluegray401))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapDetailedProfile();
+                                            },
+                                            child: Container(
+                                                width:
+                                                    getHorizontalSize(375.00),
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "msg_detailed_profil"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20Black90027))),
+                                                      Container(
+                                                          height:
+                                                              getVerticalSize(
+                                                                  1.00),
+                                                          width:
+                                                              getHorizontalSize(
+                                                                  375.00),
+                                                          margin:
+                                                              getMargin(top: 5),
+                                                          decoration: BoxDecoration(
+                                                              color: ColorConstant
+                                                                  .bluegray401))
+                                                    ]))),
+                                        GestureDetector(
+                                            onTap: () {
+                                              onTapFilters();
+                                            },
+                                            child: Container(
+                                                width:
+                                                    getHorizontalSize(375.00),
+                                                decoration:
+                                                    AppDecoration.fillWhiteA700,
+                                                child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    children: [
+                                                      Align(
+                                                          alignment: Alignment
+                                                              .centerLeft,
+                                                          child: Padding(
+                                                              padding:
+                                                                  getPadding(
+                                                                      left: 20,
+                                                                      top: 10,
+                                                                      right: 20,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                  "lbl_filters"
+                                                                      .tr,
+                                                                  overflow:
+                                                                      TextOverflow
+                                                                          .ellipsis,
+                                                                  textAlign:
+                                                                      TextAlign
+                                                                          .center,
+                                                                  style: AppStyle
+                                                                      .txtRobotoRegular20Black90028))),
+                                                      Container(
+                                                          height:
+                                                              getVerticalSize(
+                                                                  1.00),
+                                                          width:
+                                                              getHorizontalSize(
+                                                                  375.00),
+                                                          margin:
+                                                              getMargin(top: 5),
+                                                          decoration: BoxDecoration(
+                                                              color: ColorConstant
+                                                                  .bluegray401))
                                                     ])))
                                       ])))))
                 ])));
   }
 
-  onTapSignup() {
-    Get.toNamed(AppRoutes.signUpScreen);
+  onTapSplash() {
+    Get.toNamed(AppRoutes.splashScreen);
   }
 
-  onTapSignupOne() {
-    Get.toNamed(AppRoutes.signUpOneScreen);
+  onTapLoginScreen() {
+    Get.toNamed(AppRoutes.loginScreen);
   }
 
-  onTapLogin() {
+  onTapLogIn() {
     Get.toNamed(AppRoutes.logInScreen);
   }
 
-  onTapCart() {
-    Get.toNamed(AppRoutes.cartScreen);
+  onTapForgotPassword() {
+    Get.toNamed(AppRoutes.forgotPasswordScreen);
   }
 
-  onTapCartOne() {
-    Get.toNamed(AppRoutes.cartOneScreen);
+  onTapSignUp() {
+    Get.toNamed(AppRoutes.signUpScreen);
   }
 
-  onTapCreateProfile() {
-    Get.toNamed(AppRoutes.createProfileScreen);
+  onTapNotification() {
+    Get.toNamed(AppRoutes.notificationScreen);
   }
 
-  onTapOrders() {
-    Get.toNamed(AppRoutes.ordersScreen);
+  onTapInviteFriends() {
+    Get.toNamed(AppRoutes.inviteFriendsScreen);
   }
 
-  onTapReceipts() {
-    Get.toNamed(AppRoutes.receiptsScreen);
+  onTapDiscover() {
+    Get.toNamed(AppRoutes.discoverScreen);
   }
 
-  onTapOrdersConfirmation() {
-    Get.toNamed(AppRoutes.ordersConfirmationScreen);
+  onTapDailyNew() {
+    Get.toNamed(AppRoutes.dailyNewScreen);
   }
 
-  onTapHomePage() {
-    Get.toNamed(AppRoutes.homePageScreen);
+  onTapTrending() {
+    Get.toNamed(AppRoutes.trending1Screen);
   }
 
-  onTapResetPassword() {
-    Get.toNamed(AppRoutes.resetPasswordScreen);
+  onTapStories() {
+    Get.toNamed(AppRoutes.storiesScreen);
   }
 
-  onTapPricelist() {
-    Get.toNamed(AppRoutes.pricelistScreen);
+  onTapTrendingposts() {
+    Get.toNamed(AppRoutes.trendingPosts1Screen);
   }
 
-  onTapIndividualProductPage() {
-    Get.toNamed(AppRoutes.individualProductPageScreen);
+  onTapStoriesandTweets() {
+    Get.toNamed(AppRoutes.storiesAndTweetsScreen);
+  }
+
+  onTapSearch() {
+    Get.toNamed(AppRoutes.searchScreen);
+  }
+
+  onTapLive() {
+    Get.toNamed(AppRoutes.liveScreen);
+  }
+
+  onTapForYou() {
+    Get.toNamed(AppRoutes.forYou1Screen);
+  }
+
+  onTapPageView() {
+    Get.toNamed(AppRoutes.pageViewScreen);
+  }
+
+  onTapComments() {
+    Get.toNamed(AppRoutes.commentsScreen);
+  }
+
+  onTapAccount() {
+    Get.toNamed(AppRoutes.accountScreen);
+  }
+
+  onTapAccoutView() {
+    Get.toNamed(AppRoutes.accoutViewScreen);
+  }
+
+  onTapAccountDetails() {
+    Get.toNamed(AppRoutes.accountDetailsScreen);
+  }
+
+  onTapAccountDetailsOne() {
+    Get.toNamed(AppRoutes.accountDetailsOneScreen);
+  }
+
+  onTapMessages() {
+    Get.toNamed(AppRoutes.messagesScreen);
+  }
+
+  onTapChat() {
+    Get.toNamed(AppRoutes.chatScreen);
+  }
+
+  onTapFriends() {
+    Get.toNamed(AppRoutes.friendsScreen);
+  }
+
+  onTapNotifications() {
+    Get.toNamed(AppRoutes.notificationsScreen);
+  }
+
+  onTapProfile() {
+    Get.toNamed(AppRoutes.profileScreen);
+  }
+
+  onTapDetailedProfile() {
+    Get.toNamed(AppRoutes.detailedProfileScreen);
+  }
+
+  onTapFilters() {
+    Get.toNamed(AppRoutes.filtersScreen);
   }
 }

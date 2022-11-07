@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:application3/core/services/snackbars.dart';
 import 'package:application3/presentation/home_page_screen/home_page_screen.dart';
-import 'package:application3/presentation/log_in_screen/log_in_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -11,14 +10,15 @@ import 'package:http/http.dart' as http;
 import 'package:http_parser/http_parser.dart';
 import 'package:dio/dio.dart' hide Response;
 import 'package:shared_preferences/shared_preferences.dart';
-import '../../presentation/filter_result_container_screen/filter_result_container_screen.dart';
+import '../../presentation/general_home_screens/filter_result_container_screen.dart';
 import '../../presentation/orders_screen/orders_screen.dart';
 import '../../presentation/sign_in_blank_form_screen/controller/sign_in_blank_form_controller.dart';
+import '../../presentation/sign_in_blank_form_screen/sign_in_blank_form_screen.dart';
 import '../mainController.dart';
 final Future<SharedPreferences> preferences = SharedPreferences.getInstance();
 
 final mainController = Get.put(ControllerPage());
-final ControllerPage ctrl = Get.find();
+final ControllerPage ctrl = Get.put(ControllerPage());
 
 // static var client = http.client();
 
@@ -38,8 +38,7 @@ userLogin(url, data,BuildContext context) async {
     final SharedPreferences prefs = await preferences;
     prefs.setString('access', access);
     print(prefs);
-
-    succesSnack('success', 'Successful Login');
+    Get.snackbar('success', "welcome back");
     // Map tokens = responseJson['tokens'];
     String token = responseJson['access'];
     String refresh = responseJson['refresh'];
@@ -92,8 +91,6 @@ userLogin(url, data,BuildContext context) async {
       final SharedPreferences prefs = await preferences;
       prefs.setString('access', access);
       print(prefs);
-
-      succesSnack('success', 'Successful Login');
       // Map tokens = responseJson['tokens'];
       String token = responseJson['access'];
       String refresh = responseJson['refresh'];
@@ -125,7 +122,6 @@ tokenRefresh() async {
     prefs.setString('access', access);
     print(prefs);
 
-    succesSnack('success', 'Successful Login');
     // Map tokens = responseJson['tokens'];
     String token = responseJson['access'];
     mainController.setToken(token);
@@ -153,11 +149,11 @@ userLogout(url) async {
     body: encodedData,
   );
   if (response.statusCode == 200) {
-    succesSnack('Success', 'Successfully Logged Out!');
-    Get.off(() => LogInScreen());
+
+    Get.off(() => SignInBlankFormScreen());
     return null;
   } else {
-    failedSnack('Error', 'Error Logging Out!');
+    Get.snackbar('error', "Error Logging Out");
   }
 }
 
@@ -171,9 +167,9 @@ userRegister(url, data, context) async {
     },
     body: jsonEncode(data),
   );
-  succesSnack('success', response.statusCode.toString());
+  Get.snackbar('success',response.statusCode.toString());
   if (response.statusCode == 200) {
-    succesSnack('success', 'Registration Successful');
+    Get.snackbar('success','Registration Successful');
 
     postRegistrationLogin('api/authentication/login/v1/', data, context);
     // Get.off(() => Home());
@@ -236,7 +232,7 @@ deleteItem(url) async {
   );
   final responseJson = jsonDecode(response.body);
   if (response.statusCode == 204) {
-    succesSnack('Success', 'Successfully Removed');
+    Get.snackbar('success','Successfully Removed');
     return responseJson;
   } else {
     failedSnack('success', 'Failed to Deleted');
@@ -326,12 +322,12 @@ postData( url, data, successMessage) async {
   );
 
   if (response.statusCode == 200) {
-    succesSnack('success', successMessage);
+    Get.snackbar('success', successMessage);
     final responseJson = jsonDecode(response.body);
     return responseJson;
   }
   if(response.statusCode == 201){
-    succesSnack('success', successMessage);
+    Get.snackbar('success', successMessage);
     final responseJson = jsonDecode(response.body);
     return responseJson;
   }
@@ -347,6 +343,39 @@ postData( url, data, successMessage) async {
 }
 
 
+AddToCart( url, data, successMessage) async {
+  final SharedPreferences prefs = await preferences;
+  print(data);
+  var encodedData = json.encode(data);
+  print(encodedData);
+  final response = await http.post(
+    Uri.parse(serversite + url),
+    headers: <String, String>{
+      'Content-Type': 'application/json; charset=UTF-8',
+      "Authorization": "Bearer " + prefs.getString('access').toString(),
+
+
+      // HttpHeaders.authorizationHeader: prefs.getString('access').toString(),
+
+
+    },
+
+    body: encodedData,
+    // encoding: Encoding.getByName("utf-8")
+  );
+
+  if (response.statusCode == 200) {
+
+    Get.snackbar('msg', successMessage);
+
+  }
+  if(response.statusCode == 201){
+    Get.snackbar('msg', successMessage);
+  }
+  if(response.statusCode != 200 || response.statusCode != 200){
+    Get.snackbar('failed', "error adding item to cart");
+  }
+}
 
 postDataTest( successMessage,title) async {
 
@@ -387,11 +416,11 @@ postDataTest( successMessage,title) async {
 
 
   if (response.statusCode == 200) {
-    succesSnack('success', successMessage);
+    Get.snackbar('success', successMessage);
     return null;
   }
   if(response.statusCode == 201){
-    succesSnack('success', successMessage);
+    Get.snackbar('success', successMessage);
     return "success";
   }
   if(response.statusCode != 200 || response.statusCode != 200){
@@ -421,7 +450,7 @@ postOrder(url, data, successMessage,context) async {
   );
 
   if (response.statusCode == 200) {
-    succesSnack('success', successMessage);
+    Get.snackbar('success', successMessage);
     // Navigator.of(context)
     //     .push(
     //     PageRouteBuilder(
@@ -446,7 +475,7 @@ postOrder(url, data, successMessage,context) async {
 
 
   if(response.statusCode == 201){
-    succesSnack('success', successMessage);
+    Get.snackbar('success', successMessage);
     // Navigator.of(context)
     //     .push(
     //     PageRouteBuilder(
@@ -495,7 +524,7 @@ patchData(url, data, successMessage) async {
     body: jsonEncode(data),
   );
   if (response.statusCode == 200) {
-    succesSnack('success', successMessage);
+    Get.snackbar('success', successMessage);
     return null;
   } else {
     failedSnack('success', 'Failed to Update');
@@ -557,34 +586,34 @@ postImage(File file) async {
   if (response.statusCode == 200){
     print('Uploaded!');
     print(response.statusCode);
-    succesSnack('success', 'successMessage');
+    Get.snackbar('success', "successfully posted");
   }else{  print(response.statusCode);
     failedSnack('success', 'Failed to Update');
   }
 
 }
 
-// Future<Future<http.StreamedResponse>> addImage(String url , String filePath,postOrigin,venueId) async{
-//
-//   var uri = Uri.parse(serversite + url);
-//   var request = http.MultipartRequest('POST', uri);
-//   request.files.add(await http.MultipartFile.fromPath('media', filePath));
-//   request.fields.addAll({
-//     "url": "url",
-//     // "user": "${ctrl.userProfile.user}",
-//     "postOrigin":"$postOrigin",
-//     "venueId":"$venueId"
-//   });
-//
-//   request.headers.addAll({
-//     'Content-type':"multipart/form-data",
-//     "Authorization":ctrl.authtoken,
-//   });
-//
-//   var response = request.send();
-//   return response;
-//
-// }
+Future<Future<http.StreamedResponse>> addImage(String url , String filePath,postOrigin,venueId) async{
+
+  var uri = Uri.parse(serversite + url);
+  var request = http.MultipartRequest('POST', uri);
+  request.files.add(await http.MultipartFile.fromPath('media', filePath));
+  request.fields.addAll({
+    "url": "url",
+    // "user": "${ctrl.userProfile.user}",
+    "postOrigin":"$postOrigin",
+    "venueId":"$venueId"
+  });
+
+  request.headers.addAll({
+    'Content-type':"multipart/form-data",
+    "Authorization":ctrl.authtoken,
+  });
+
+  var response = request.send();
+  return response;
+
+}
 
 Future<Future<http.StreamedResponse>> addVenue(url,name,address,country,county,description,currency, uploadDocument,nationalId, profilePicture,venueType) async{
 
@@ -664,28 +693,28 @@ Future<Future<http.StreamedResponse>> addItem(
 
 }
 
-// Future<Future<http.StreamedResponse>> addPost(String url ,String postUrl, String filePath,postOrigin,venueId) async{
-//
-//   var uri = Uri.parse(serversite + url);
-//   var request = http.MultipartRequest('POST', uri);
-//   request.files.add(await http.MultipartFile.fromPath('media', filePath));
-//   request.fields.addAll({
-//     "url": postUrl,
-//     "user": "${ctrl.userProfile.user}",
-//     "postType": "Video",
-//     "postOrigin":"$postOrigin",
-//     "venueId":"$venueId"
-//   });
-//
-//   request.headers.addAll({
-//     'Content-type':"multipart/form-data",
-//     "Authorization":ctrl.authtoken,
-//   });
-//
-//   var response = request.send();
-//   return response;
-//
-// }
+Future<Future<http.StreamedResponse>> addPost(String url ,String postUrl, String filePath,postOrigin,venueId) async{
+
+  var uri = Uri.parse(serversite + url);
+  var request = http.MultipartRequest('POST', uri);
+  request.files.add(await http.MultipartFile.fromPath('media', filePath));
+  request.fields.addAll({
+    "url": postUrl,
+    "user": "1",
+    "postType": "Video",
+    "postOrigin":"$postOrigin",
+    "venueId":"$venueId"
+  });
+
+  request.headers.addAll({
+    'Content-type':"multipart/form-data",
+    "Authorization":ctrl.authtoken,
+  });
+
+  var response = request.send();
+  return response;
+
+}
 
 
 

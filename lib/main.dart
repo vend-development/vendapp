@@ -1,16 +1,17 @@
 
-import 'package:application3/presentation/sign_in_blank_form_screen/sign_in_blank_form_screen.dart';
-import 'package:application3/presentation/sign_up_blank_form_screen/sign_up_blank_form_screen.dart';
-import 'package:application3/presentation/walkthrough_one_screen/walkthrough_one_screen.dart';
-import 'package:application3/presentation/wallet_registration/wallet_registration.dart';
+import 'package:application3/presentation/filters_screen/filters_screen.dart';
+import 'package:application3/presentation/general_home_screens/filter_result_container_screen.dart';
+import 'package:application3/presentation/stories_and_tweets_screen/stories_and_tweets_screen.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
+import 'package:camera/camera.dart';
 import 'core/app_export.dart';
 
-void main() {
+List<CameraDescription> cameras = [];
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  cameras = await availableCameras();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]).then((value) {
@@ -29,10 +30,10 @@ class MyApp extends StatelessWidget {
       locale: Get.deviceLocale, //for setting localization strings
       fallbackLocale: Locale('en', 'US'),
       title: 'Vend',
-      // initialBinding: InitialBindings(),
-      // initialRoute: AppRoutes.individualProductPageScreen,
-      // getPages: AppRoutes.pages,
-      home:SignInBlankFormScreen(),
+      initialBinding: InitialBindings(),
+      initialRoute: AppRoutes.initialRoute,
+      getPages: AppRoutes.pages,
+      // home:GeneralScreen(),
     );
   }
 }

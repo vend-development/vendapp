@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 class ColorConstant {
   static Color orange600 = fromHex('#ff890b');
 
+  static Color mainVendOrange = fromHex('#ED6C02');
 
   static Color orangeA2003f = fromHex('#3ff18f41');
 
@@ -77,6 +78,71 @@ class ColorConstant {
   static Color gray200 = fromHex('#ebebeb');
 
   static Color gray201 = fromHex('#eaeaea');
+
+  static Color black9007f = fromHex('#7f000000');
+
+  static Color whiteA7007f = fromHex('#7ffefefe');
+
+  static Color whiteA7003f = fromHex('#3fffffff');
+
+  static Color black9009e = fromHex('#9e080808');
+
+  static Color red300 = fromHex('#ff6e6e');
+
+  static Color whiteA70072 = fromHex('#72ffffff');
+
+  static Color whiteA70070 = fromHex('#70ffffff');
+
+  static Color deepPurple200 = fromHex('#aea2dd');
+
+  static Color black90087 = fromHex('#87000000');
+
+  static Color greenA700 = fromHex('#00b649');
+
+  static Color black901 = fromHex('#080808');
+
+  static Color deepPurpleA100 = fromHex('#b29dff');
+
+  static Color deepPurpleA200 = fromHex('#8165ea');
+
+  static Color gray600 = fromHex('#808080');
+
+  static Color gray601 = fromHex('#757575');
+
+  static Color gray502 = fromHex('#a6a1a1');
+
+  static Color gray400 = fromHex('#afafaf');
+
+
+  static Color gray401 = fromHex('#c3c3c3');
+
+  static Color gray503 = fromHex('#939393');
+
+  static Color gray602 = fromHex('#7b7b7b');
+
+  static Color indigo50 = fromHex('#e0d8ff');
+
+  static Color deepPurpleA200F2 = fromHex('#f28164ea');
+
+  static Color deepPurpleA200F3 = fromHex('#f28165ea');
+
+  static Color gray101 = fromHex('#f5f2ff');
+
+  static Color deepPurple50 = fromHex('#ede9ff');
+
+  static Color whiteA70000 = fromHex('#00ffffff');
+
+  static Color bluegray401 = fromHex('#888888');
+
+
+  static Color black90019 = fromHex('#19000000');
+
+  static Color gray40000 = fromHex('#00c4c4c4');
+
+  static Color black900Ad = fromHex('#ad000000');
+
+  static Color deepPurpleA20033 = fromHex('#338165ea');
+
 
   static Color fromHex(String hexString) {
     final buffer = StringBuffer();

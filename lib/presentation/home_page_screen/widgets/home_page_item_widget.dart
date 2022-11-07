@@ -1,7 +1,8 @@
 import 'package:application3/presentation/pricelist_screen/pricelist_screen.dart';
 
+import '../../PriceListPage/controller/home_one_controller.dart';
 import '../../cart_screen/controller/cart_controller.dart';
-import '../../home_one_screen/home_one_screen.dart';
+import '../../PriceListPage/user_price_list_screen.dart';
 import '../../pricelist_screen/controller/pricelist_controller.dart';
 import '../controller/home_page_controller.dart';
 import '../models/home_page_item_model.dart';
@@ -12,6 +13,7 @@ import 'package:flutter/material.dart';
 class HomePageItemWidget extends StatelessWidget {
   HomePageItemWidget(this.venue);
   PricelistController pricelistController = Get.find();
+  UserPriceListController userPricelistController = Get.put(UserPriceListController());
   CartController cartController = Get.find();
 
   VenueModel venue;
@@ -24,6 +26,9 @@ class HomePageItemWidget extends StatelessWidget {
       onTap: (){
         pricelistController.venueId.value = venue.id;
         pricelistController.venueName.value = venue.name;
+        pricelistController.venue.value = venue;
+        userPricelistController.category.value = 0;
+        pricelistController.venueprofile.value = venue.profilePicture;
         pricelistController.fetchProducts();
         cartController.venueId.value = venue.id;
         cartController.fetchCart();
@@ -146,23 +151,53 @@ class HomePageItemWidget extends StatelessWidget {
                 ],
               ),
             ),
+
+
             Align(
               alignment: Alignment.centerLeft,
               child: Padding(
                 padding: getPadding(
                   top: 5,
                 ),
-                child: CommonImageView(
-                  imagePath: ImageConstant.imgRectangle71,
-                  height: getVerticalSize(
-                    172.00,
-                  ),
-                  width: getHorizontalSize(
-                    410.00,
+                child:Container(
+                  margin: const EdgeInsets.all(0.0),
+                  width: double.infinity,
+                  height: 200.0,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25.0),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black45,
+                        offset: Offset(0, 5),
+                        blurRadius: 8.0,
+                      ),
+                    ],
+
+
+                    image: DecorationImage(
+                      image: NetworkImage(
+                        venue.profilePicture,
+                      ),
+
+                      fit: BoxFit.fitWidth,
+                    ),
+
                   ),
                 ),
+                // child: CommonImageView(
+                //   imagePath: ImageConstant.imgRectangle71,
+                //   height: getVerticalSize(
+                //     172.00,
+                //   ),
+                //   width: getHorizontalSize(
+                //     410.00,
+                //   ),
+                // ),
               ),
             ),
+
+
+
             Align(
               alignment: Alignment.centerRight,
               child: Padding(

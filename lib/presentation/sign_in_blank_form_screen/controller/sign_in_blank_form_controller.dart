@@ -1,4 +1,4 @@
-import 'package:application3/presentation/filter_result_container_screen/filter_result_container_screen.dart';
+import 'package:application3/presentation/general_home_screens/filter_result_container_screen.dart';
 
 import '../../../core/services/APIService.dart';
 import '/core/app_export.dart';
@@ -23,8 +23,6 @@ class SignInBlankFormController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-
-    verifyToken();
 
   }
 

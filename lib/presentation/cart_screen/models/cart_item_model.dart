@@ -148,7 +148,7 @@ class User {
   User({
     required this.id,
     required this.password,
-    required this.lastLogin,
+    this.lastLogin,
     required this.email,
     required this.firstName,
     required this.middleName,
@@ -164,7 +164,7 @@ class User {
 
   int id;
   String password;
-  DateTime lastLogin;
+  dynamic lastLogin;
   String email;
   String firstName;
   String middleName;
@@ -180,7 +180,7 @@ class User {
   factory User.fromJson(Map<String, dynamic> json) => User(
     id: json["id"],
     password: json["password"],
-    lastLogin: DateTime.parse(json["last_login"]),
+    lastLogin: DateTime.now(),
     email: json["email"],
     firstName: json["first_name"],
     middleName: json["middle_name"],

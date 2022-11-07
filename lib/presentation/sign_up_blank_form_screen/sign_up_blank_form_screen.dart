@@ -158,8 +158,8 @@ class SignUpBlankFormScreen extends GetWidget<SignUpBlankFormController> {
                                           child: CommonImageView(
                                               svgPath: controller
                                                   .isShowPassword.value
-                                                  ? ImageConstant.imgReply
-                                                  : ImageConstant.imgReply))),
+                                                  ? ImageConstant.imgEye
+                                                  : ImageConstant.imgEye))),
                                   suffixConstraints: BoxConstraints(
                                       minWidth: getHorizontalSize(20.00),
                                       minHeight: getVerticalSize(20.00)),
@@ -209,8 +209,8 @@ class SignUpBlankFormScreen extends GetWidget<SignUpBlankFormController> {
                                           child: CommonImageView(
                                               svgPath: controller
                                                   .isShowPassword.value
-                                                  ? ImageConstant.imgReply
-                                                  : ImageConstant.imgReply))),
+                                                  ? ImageConstant.imgEye
+                                                  : ImageConstant.imgEye))),
                                   suffixConstraints: BoxConstraints(
                                       minWidth: getHorizontalSize(20.00),
                                       minHeight: getVerticalSize(20.00)),

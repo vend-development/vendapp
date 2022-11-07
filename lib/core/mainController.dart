@@ -1,11 +1,14 @@
+import 'package:application3/core/app_export.dart';
 import 'package:application3/core/services/snackbars.dart';
+import 'package:application3/core/utils/color_constant.dart';
+import 'package:application3/presentation/home_page_screen/home_page_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:cloudflare/cloudflare.dart';
 
-var serversite = 'https://vendtest.herokuapp.com/';
+var serversite = 'https://seashell-app-ohvm4.ondigitalocean.app/';
 // var serversite = 'http://192.168.100.192:8000/';
 class ControllerPage extends GetxController {
 
@@ -110,8 +113,48 @@ class ControllerPage extends GetxController {
 
   }
 
+
+
   void Notify()  async{
     String timezom = await AwesomeNotifications().getLocalTimeZoneIdentifier();
+
+    AwesomeNotifications().initialize(
+      // set the icon to null if you want to use the default app icon
+        null,
+        [
+          NotificationChannel(
+              channelGroupKey: 'basic_channel_group',
+              channelKey: 'key1', /* same name */
+              channelName: 'Basic notifications',
+              channelDescription: 'Notification channel for basic tests',
+              defaultColor: ColorConstant.mainVendOrange,
+              ledColor: Colors.white)
+        ],
+        // Channel groups are only visual and are not required
+        channelGroups: [
+          NotificationChannelGroup(
+              channelGroupName: 'Basic group',
+              channelGroupKey: 'basic_channel_group')
+        ],
+        debug: true);
+
+    AwesomeNotifications().isNotificationAllowed().then((isAllowed) {
+      if (!isAllowed) {
+        // This is just a basic example. For real apps, you must show some
+        // friendly dialog box before call the request method.
+        // This is very important to not harm the user experience
+        AwesomeNotifications().requestPermissionToSendNotifications();
+      }
+    });
+
+    ////Notification Listener
+
+    // AwesomeNotifications()
+    //     .actionStream
+    //     .listen((ReceivedNotification receivedNotification) {
+    //       Get.toNamed(AppRoutes.initialRoute);
+    // });
+
     await AwesomeNotifications().createNotification(
       content: NotificationContent(
           id: 1,
@@ -121,7 +164,7 @@ class ControllerPage extends GetxController {
           bigPicture: 'https://protocoderspoint.com/wp-content/uploads/2021/05/Monitize-flutter-app-with-google-admob-min-741x486.png',
           notificationLayout: NotificationLayout.BigPicture
       ),
-      schedule: NotificationInterval(interval: 2,timeZone: timezom,repeats: true),
+      schedule: NotificationInterval(interval: 60,timeZone: timezom,repeats: false),
     );
   }
 

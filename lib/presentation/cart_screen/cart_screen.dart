@@ -41,7 +41,6 @@ class CartScreen extends GetWidget<CartController> {
               child: Container(
                   height: getVerticalSize(90.00),
                   width: size.width,
-                  margin: getMargin(top: 64),
                   decoration: AppDecoration.fillOrange800,
                   child: Stack(
                       alignment: Alignment.topRight,
@@ -91,7 +90,6 @@ class CartScreen extends GetWidget<CartController> {
               child: Container(
                   height: getVerticalSize(90.00),
                   width: size.width,
-                  margin: getMargin(top: 64),
                   decoration: AppDecoration.fillOrange800,
                   child: Stack(
                       alignment: Alignment.topRight,
@@ -153,55 +151,60 @@ class CartScreen extends GetWidget<CartController> {
                                         style: AppStyle.txtInterBold32))
                               ]))),
                   Expanded(
-                      child: SingleChildScrollView(
-                          child: Padding(
-                              padding: getPadding(top: 17),
-                              child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  children: [
-                                    Padding(
-                                        padding:
-                                            getPadding(left: 15, right: 0),
-                                     child: GetX<CartController>(
-                                        builder:(controller) {
-                                          if(controller.cartList.isNotEmpty){
-                                            return
-
-                                              ListView.builder(
-                                                padding: getPadding(
-                                                  left: 24,
-                                                  top: 45,
-                                                  right: 0,
-                                                ),
-                                                // scrollDirection: Axis.horizontal,
-                                                shrinkWrap: true,
-                                                // physics:
-                                                // NeverScrollableScrollPhysics(),
-                                                physics: BouncingScrollPhysics(),
-                                                itemCount: controller.cartList
-                                                    .length,
-                                                itemBuilder: (context, index) {
-                                                  return CartItemWidget(
-                                                    controller.cartList[index],
-                                                  );
-                                                },
-                                              );
-                                          }else{
-                                            return
+                      child: Container(
+                        height: height * 0.5,
+                        child: SingleChildScrollView(
+                            child: Padding(
+                                padding: getPadding(top: 5),
+                                child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Padding(
+                                          padding:
+                                              getPadding(left: 15, right: 0),
+                                       child: GetX<CartController>(
+                                          builder:(controller) {
+                                            if(controller.cartList.isNotEmpty){
+                                              return
                                                 Container(
-                                                    height: height *0.7,
+                                                  height: height * 0.85,
+                                                  child: ListView.builder(
+                                                    padding: getPadding(
+                                                      left: 24,
+                                                      top: 45,
+                                                      right: 0,
+                                                    ),
+                                                    // scrollDirection: Axis.horizontal,
+                                                    shrinkWrap: true,
+                                                    // physics:
+                                                    // NeverScrollableScrollPhysics(),
+                                                    physics: BouncingScrollPhysics(),
+                                                    itemCount: controller.cartList
+                                                        .length,
+                                                    itemBuilder: (context, index) {
+                                                      return CartItemWidget(
+                                                        controller.cartList[index],
+                                                      );
+                                                    },
+                                                  ),
+                                                );
+                                            }else{
+                                              return
+                                                  Container(
+                                                      height: height *0.7,
 
-                                                    child: Center(child: Text('Your Cart is Currently Empty!')));
+                                                      child: Center(child: Text('Your Cart is Currently Empty!')));
+                                            }
+
                                           }
+                                       )
 
-                                        }
-                                     )
+                                      ),
 
-                                    ),
-
-                                  ]))))
+                                    ]))),
+                      ))
                 ])));
   }
 

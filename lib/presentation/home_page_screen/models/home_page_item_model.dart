@@ -78,7 +78,7 @@ class VenueModel {
     tableNumbers: json["tableNumbers"],
     hasRoomNumbers: json["hasRoomNumbers"],
     roomNumbers: json["roomNumbers"],
-    profilePicture: "http://source.unsplash.com/random",
+    profilePicture: json["profilePicture"],
     uploadDocument: "uploadDocument",
     isOpen: json["isOpen"],
     currency: json["currency"].toString(),

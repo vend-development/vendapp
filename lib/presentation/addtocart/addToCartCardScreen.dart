@@ -288,7 +288,7 @@ class AddToCartCard extends GetWidget<AddToCartController > {
                                               "venue": product.venue,
                                             };
 
-                                            postData('api/venues/addtocart/v1/', data,"Successfully added ${quantity} to cart");
+                                            await AddToCart('api/venues/addtocart/v1/', data,"Successfully added  ${quantity} ${product.name} to cart");
                                             cartController.fetchCart();
                                             Navigator.pop(context);
 

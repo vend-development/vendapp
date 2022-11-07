@@ -19,6 +19,7 @@ class CartController extends GetxController {
   @override
   void onReady() {
     super.onReady();
+    fetchCart();
   }
 
   @override

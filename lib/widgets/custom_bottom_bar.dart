@@ -9,22 +9,27 @@ class CustomBottomBar extends StatelessWidget {
   List<BottomMenuModel> bottomMenuList = [
     BottomMenuModel(
       icon: ImageConstant.imgHome,
-      title: "Home",
+      title: "home",
       type: BottomBarEnum.Home,
     ),
     BottomMenuModel(
-      icon: ImageConstant.imgSearchBluegray100,
-      title: "Orders",
-      type: BottomBarEnum.Search,
+      icon: ImageConstant.imgVideocamera18X25,
+      title: "streams",
+      type: BottomBarEnum.Streams,
     ),
     BottomMenuModel(
-      icon: ImageConstant.imgMenu,
-      title: "Receipts",
-      type: BottomBarEnum.Booking,
+      icon: ImageConstant.imgLocation,
+      title: "messages",
+      type: BottomBarEnum.Messages,
+    ),
+    BottomMenuModel(
+      icon: ImageConstant.imgNotification,
+      title: "notifications",
+      type: BottomBarEnum.Notifications,
     ),
     // BottomMenuModel(
-    //   icon: ImageConstant.imgUser,
-    //   title: "Profile",
+    //   icon: ImageConstant.imgHome,
+    //   title: "home",
     //   type: BottomBarEnum.Profile,
     // )
   ];
@@ -36,19 +41,34 @@ class CustomBottomBar extends StatelessWidget {
     return Obx(
       () => Container(
         decoration: BoxDecoration(
-          color: ColorConstant.gray900D8,
+          color: ColorConstant.whiteA700,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(
               getHorizontalSize(
-                16.00,
+                12.00,
               ),
             ),
             topRight: Radius.circular(
               getHorizontalSize(
-                16.00,
+                12.00,
               ),
             ),
           ),
+          boxShadow: [
+            BoxShadow(
+              color: ColorConstant.deepPurpleA20033,
+              spreadRadius: getHorizontalSize(
+                2.00,
+              ),
+              blurRadius: getHorizontalSize(
+                2.00,
+              ),
+              offset: Offset(
+                0,
+                -3,
+              ),
+            ),
+          ],
         ),
         child: BottomNavigationBar(
           backgroundColor: Colors.transparent,
@@ -66,25 +86,24 @@ class CustomBottomBar extends StatelessWidget {
                 children: [
                   CommonImageView(
                     svgPath: bottomMenuList[index].icon,
-                    height: getSize(
-                      24.00,
+                    height: getVerticalSize(
+                      26.00,
                     ),
-                    width: getSize(
-                      24.00,
+                    width: getHorizontalSize(
+                      25.00,
                     ),
-                    color: ColorConstant.gray500,
+                    color: ColorConstant.bluegray400,
                   ),
                   Padding(
                     padding: getPadding(
-                      top: 2,
+                      top: 13,
                     ),
                     child: Text(
                       bottomMenuList[index].title ?? "",
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
-                      style: AppStyle.txtUrbanistMedium10.copyWith(
-                        letterSpacing: 0.20,
-                        color: ColorConstant.gray500,
+                      style: AppStyle.txtInterRegular10Bluegray400.copyWith(
+                        color: ColorConstant.bluegray400,
                       ),
                     ),
                   ),
@@ -97,25 +116,24 @@ class CustomBottomBar extends StatelessWidget {
                 children: [
                   CommonImageView(
                     svgPath: bottomMenuList[index].icon,
-                    height: getSize(
-                      24.00,
+                    height: getVerticalSize(
+                      23.00,
                     ),
-                    width: getSize(
-                      24.00,
+                    width: getHorizontalSize(
+                      22.00,
                     ),
-                    color: ColorConstant.bluegray100,
+                    color: ColorConstant.deepPurpleA200,
                   ),
                   Padding(
                     padding: getPadding(
-                      top: 2,
+                      top: 12,
                     ),
                     child: Text(
                       bottomMenuList[index].title ?? "",
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
-                      style: AppStyle.txtUrbanistBold10.copyWith(
-                        letterSpacing: 0.20,
-                        color: ColorConstant.cyan600,
+                      style: AppStyle.txtInterRegular10.copyWith(
+                        color: ColorConstant.deepPurpleA200,
                       ),
                     ),
                   ),
@@ -136,8 +154,9 @@ class CustomBottomBar extends StatelessWidget {
 
 enum BottomBarEnum {
   Home,
-  Search,
-  Booking,
+  Streams,
+  Messages,
+  Notifications,
   Profile,
 }
 

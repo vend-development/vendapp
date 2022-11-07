@@ -4,6 +4,8 @@
 
 import 'dart:convert';
 
+import 'package:application3/presentation/pricelist_screen/controller/pricelist_controller.dart';
+
 List<PricelistItemModel> pricelistItemModelFromJson(String str) => List<PricelistItemModel>.from(json.decode(str).map((x) => PricelistItemModel.fromJson(x)));
 
 String pricelistItemModelToJson(List<PricelistItemModel> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
@@ -70,6 +72,8 @@ class PricelistCategoryProduct {
     required this.quantity,
     required this.categoryName,
   });
+
+
 
   int category;
   int id;

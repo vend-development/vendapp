@@ -1,4 +1,5 @@
 import 'package:application3/core/colors.dart';
+import 'package:application3/core/services/APIService.dart';
 
 import '../../presentation/cart_screen/controller/cart_controller.dart';
 import '../../presentation/cart_screen/models/cart_item_model.dart';
@@ -107,32 +108,29 @@ class CheckoutWidget extends StatelessWidget {
                                                 textAlign: TextAlign.left))
                                       ]))
                             ]),
-                        Padding(
-                            padding:
-                            getPadding(
-                                top: 21,
-                                bottom:
-                                3),
-                            child: CommonImageView(
-                                svgPath:
-                                ImageConstant
-                                    .imgTrash,
-                                height:
-                                getVerticalSize(
-                                    46.00),
-                                width: getHorizontalSize(
-                                    34.00)))
+                        
+                        GestureDetector(
+                          onTap: (){
+                            // deleteItem(url);
+                          },
+                          child: Padding(
+                              padding:
+                              getPadding(
+                                  top: 21,
+                                  bottom:
+                                  3),
+                              child: CommonImageView(
+                                  svgPath:
+                                  ImageConstant
+                                      .imgTrash,
+                                  height:
+                                  getVerticalSize(
+                                      46.00),
+                                  width: getHorizontalSize(
+                                      34.00))),
+                        )
                       ]))),
-          Padding(
-              padding: getPadding(
-                  left: 93, right: 93),
-              child: Text(
-                  "lbl_black_pearl_ts".tr,
-                  overflow:
-                  TextOverflow.ellipsis,
-                  textAlign: TextAlign.left,
-                  style: AppStyle
-                      .txtInterSemiBold15)),
+
         ],
       ),
     );

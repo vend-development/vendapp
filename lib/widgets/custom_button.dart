@@ -74,8 +74,31 @@ class CustomButton extends StatelessWidget {
   _buildDecoration() {
     return BoxDecoration(
       color: _setColor(),
+      border: _setBorder(),
       borderRadius: _setBorderRadius(),
     );
+  }
+
+  _setBorder() {
+    switch (variant) {
+      case ButtonVariant.OutlineWhiteA700:
+        return Border.all(
+          color: ColorConstant.whiteA700,
+          width: getHorizontalSize(
+            1.00,
+          ),
+        );
+      case ButtonVariant.FillWhiteA700:
+      case ButtonVariant.FillDeeppurpleA200:
+        return null;
+      default:
+        return Border.all(
+          color: ColorConstant.deepPurpleA200,
+          width: getHorizontalSize(
+            1.00,
+          ),
+        );
+    }
   }
 
   _setPadding() {
@@ -95,8 +118,16 @@ class CustomButton extends StatelessWidget {
     }
   }
 
+
   _setColor() {
     switch (variant) {
+      case ButtonVariant.FillWhiteA700:
+        return ColorConstant.whiteA700;
+      case ButtonVariant.FillDeeppurpleA200:
+        return ColorConstant.deepPurpleA200;
+      case ButtonVariant.OutlineDeeppurpleA200:
+      case ButtonVariant.OutlineWhiteA700:
+        return null;
       default:
         return ColorConstant.orange800;
     }
@@ -104,6 +135,13 @@ class CustomButton extends StatelessWidget {
 
   _setBorderRadius() {
     switch (shape) {
+      case ButtonShape.CircleBorder25:
+        return BorderRadius.circular(
+          getHorizontalSize(
+            25.00,
+          ),
+        );
+
       case ButtonShape.RoundedBorder25:
         return BorderRadius.circular(
           getHorizontalSize(
@@ -147,6 +185,63 @@ class CustomButton extends StatelessWidget {
           fontFamily: 'Inter',
           fontWeight: FontWeight.w400,
         );
+      case ButtonFontStyle.InterMedium18:
+        return TextStyle(
+          color: ColorConstant.deepPurpleA200,
+          fontSize: getFontSize(
+            18,
+          ),
+          fontFamily: 'Inter',
+          fontWeight: FontWeight.w500,
+        );
+      case ButtonFontStyle.InterMedium18WhiteA700:
+        return TextStyle(
+          color: ColorConstant.whiteA700,
+          fontSize: getFontSize(
+            18,
+          ),
+          fontFamily: 'Inter',
+          fontWeight: FontWeight.w500,
+        );
+      case ButtonFontStyle.InterMedium18OrangeA700:
+        return TextStyle(
+          color: ColorConstant.mainVendOrange,
+          fontSize: getFontSize(
+            18,
+          ),
+          fontFamily: 'Inter',
+          fontWeight: FontWeight.w500,
+        );
+      case ButtonFontStyle.InterMedium14:
+        return TextStyle(
+          color: ColorConstant.whiteA700,
+          fontSize: getFontSize(
+            14,
+          ),
+          fontFamily: 'Inter',
+          fontWeight: FontWeight.w500,
+        );
+      case ButtonFontStyle.InterSemiBold14WhiteA700:
+        return TextStyle(
+          color: ColorConstant.whiteA700,
+          fontSize: getFontSize(
+            14,
+          ),
+          fontFamily: 'Inter',
+          fontWeight: FontWeight.w400,
+        );
+      case ButtonFontStyle.InterRegular14:
+        return TextStyle(
+          color: ColorConstant.whiteA700,
+          fontSize: getFontSize(
+            14,
+          ),
+          fontFamily: 'Inter',
+          fontWeight: FontWeight.w400,
+        );
+
+
+
       default:
         return TextStyle(
           color: ColorConstant.whiteA700,
@@ -168,6 +263,9 @@ enum ButtonShape {
   RoundedBorder10,
   RoundedBorder12,
   RoundedBorder16,
+  CircleBorder25,
+  CircleBorder14,
+  CustomBorderTL15,
 }
 
 
@@ -184,6 +282,10 @@ enum ButtonVariant {
   OutlineWhiteA70033,
   OutlineGray400,
   FillBluegray100,
+  OutlineDeeppurpleA200,
+  FillWhiteA700,
+  OutlineWhiteA700,
+  FillDeeppurpleA200,
 }
 enum ButtonFontStyle {
   InterRegular32,
@@ -192,5 +294,12 @@ enum ButtonFontStyle {
   InterRegular36,
   UrbanistRegular14,
   UrbanistBold16,
+  InterSemiBold14,
+  InterMedium18,
+  InterMedium18WhiteA700,
+  InterMedium18OrangeA700,
+  InterMedium14,
+  InterSemiBold14WhiteA700,
+  InterRegular14,
 }
 

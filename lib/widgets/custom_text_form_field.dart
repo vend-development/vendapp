@@ -178,8 +178,14 @@ enum TextFormFieldPadding {
 
 enum TextFormFieldVariant {
   FillBluegray900,
+  FillDeeppurpleA100,
+  FillWhiteA70070,
+  FillGray101,
 }
 
 enum TextFormFieldFontStyle {
   UrbanistSemiBold14,
+  InterMedium16,
+  InterMedium14,
+  InterMedium14Gray502,
 }
